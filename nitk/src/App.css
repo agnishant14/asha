@@ -1,0 +1,216 @@
+/* General Styles */
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.body{
+   background-color: "#e9d5e9";
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Keyframes */
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Animation for logo */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes throbbing {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.circular-button {
+  position: absolute;
+  top: 55%; /* 3/4th distance from the top */
+  left: 50%; /* center horizontally */
+  transform: translate(-50%, -50%); /* adjust for button size */
+  border: none;
+  border-radius: 50%; /* make the button circular */
+  padding: 20px; /* adjust padding to fit your image */
+  background-color: #fff; /* white background */
+  cursor: pointer; /* change cursor to pointer on hover */
+  animation: throbbing 1.5s infinite ease-in-out; /* throbbing effect */
+}
+.circular-button.clicked {
+  background-color: green; /* Change to green when clicked */
+}
+
+.circular-button:hover {
+  background-color: #f0f0f0; /* optional hover effect */
+}
+
+
+.circular-button img {
+  width: 100%; /* adjust image size to fit within the button */
+  height: 100%;
+  object-fit: cover; /* scale image to fit within the button */
+  
+  border-radius: 50%; /* make the image circular */
+}
+.phone {
+  /* iPhone 14 dimensions */
+  width: 390px; /* width of iPhone 14 */
+  height: 844px; /* height of iPhone 14 */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
+  position: relative;
+  background-color: #E9D5D0;
+  padding-top: 20px; /* Added padding to push content down */
+  background: linear-gradient(
+    to bottom,
+    #f7f7f7 0%, /* Lighter white color */
+    #E9D5D0 80%, /* Slightly darker white color */
+    #B56060 100%, /* Light gray color */
+  );
+  /* Add overflow hidden to prevent content from overflowing */
+  overflow: hidden;
+}
+.top-h{
+  position: absolute;
+  top: 22%; /* 3/4th distance from the top */
+  color: #B56060;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: "SF Pro";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 590;
+  line-height: 50.556px; /* 105.324% */
+}
+.listen{
+  position: absolute;
+  top: 67%; /* 3/4th distance from the top */
+  left:33%;
+  color: #B56060;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: "SF Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 590;
+  line-height: 50.556px; /* 105.324% */
+}
+.listen2{
+  position: absolute;
+  top: 69%; /* 3/4th distance from the top */
+  left:35%;
+  color: #B56060;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: "SF Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 590;
+  line-height: 50.556px; /* 105.324% */
+}
+.location-info{
+  position: absolute;
+  top: 7%; /* 3/4th distance from the top */
+  left:13%;
+  display: flex;
+  width: 300px;
+  height: 56px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  border-radius: 64px;
+  background: #fff;
+  /* Inner Shadow 1 */
+  box-shadow: 3px 6px 8px 0px rgba(1, 1, 20, 0.08) inset;
+}
+/* General Modal Styles */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure the modal is on top of other content */
+  width: 300px; /* Adjust as needed */
+  text-align: center; /* Center-align text */
+}
+
+/* Modal Buttons */
+.modal button {
+  background-color: #007bff; /* Primary button color */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.modal button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+/* Optional: Secondary Button */
+.modal button:nth-of-type(2) {
+  background-color: #6c757d; /* Secondary button color */
+}
+
+.modal button:nth-of-type(2):hover {
+  background-color: #5a6268; /* Darker shade for secondary button hover effect */
+}
+
+/* Overlay Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 999; /* Just below the modal */
+}
+body {
+  font-family: 'Consolas', monospace;
+}
