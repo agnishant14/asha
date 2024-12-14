@@ -1,5 +1,5 @@
 # ASHA (Automated SOS and Help App)
-### Code is in the Master Branch
+
 
 ## Overview
 
